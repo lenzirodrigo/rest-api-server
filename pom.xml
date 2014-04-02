@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.lenzi.server</groupId>
+    <groupId>com.lenzi.server</groupId>
     <artifactId>server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-	<name>Server</name>
-	<packaging>pom</packaging>
+    <name>Server</name>
+    <packaging>pom</packaging>
 
-	<modules>
-		<module>persistence</module>
-	</modules>
+    <modules>
+        <module>persistence</module>
+    </modules>
 
     <properties>
         <postgresql.version>9.2-1004-jdbc4</postgresql.version>
