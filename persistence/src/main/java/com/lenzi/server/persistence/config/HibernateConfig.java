@@ -1,4 +1,4 @@
-package com.lenzi.server.config;
+package com.lenzi.server.persistence.config;
 
 import java.util.Properties;
 
@@ -33,7 +33,7 @@ public class HibernateConfig {
     private static final String HIBERNATE_FORMAT_SQL = "hibernate.format_sql";
     private static final String HIBERNATE_HBM2DDL_AUTO = "hibernate.hbm2ddl.auto";
 
-    private static final String ENTITY_MANAGER_PACKAGES_TO_SCAN = "com.lenzi.server.model";
+    private static final String ENTITY_MANAGER_PACKAGES_TO_SCAN = "com.lenzi.server.persistence.model";
 
     @Resource
     private Environment environment;

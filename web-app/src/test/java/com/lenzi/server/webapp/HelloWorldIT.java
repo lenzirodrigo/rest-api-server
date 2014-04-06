@@ -1,4 +1,4 @@
-package com.lenzi.server;
+package com.lenzi.server.webapp;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,13 +15,15 @@ import org.codehaus.jackson.map.MappingJsonFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.lenzi.server.webapp.JsonBean;
+
 public class HelloWorldIT {
     private static String endpointUrl;
 
     @BeforeClass
     public static void beforeClass() {
-//        endpointUrl = System.getProperty("service.url");
-        endpointUrl = "http://localhost:8080/rest-api/";
+        endpointUrl = System.getProperty("service.url");
+//        endpointUrl = "http://localhost:8080/rest-api/";
     }
 
     @Test

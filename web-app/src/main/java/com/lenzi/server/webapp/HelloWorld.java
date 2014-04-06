@@ -1,4 +1,4 @@
-package com.lenzi.server;
+package com.lenzi.server.webapp;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -8,7 +8,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import com.lenzi.server.daos.CustomerDao;
+import com.lenzi.server.persistence.daos.CustomerDao;
 
 @Path("/hello")
 public class HelloWorld {

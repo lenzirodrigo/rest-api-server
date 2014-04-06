@@ -1,4 +1,4 @@
-package com.lenzi.server.daos;
+package com.lenzi.server.persistence.daos;
 
 import org.springframework.stereotype.Repository;
 

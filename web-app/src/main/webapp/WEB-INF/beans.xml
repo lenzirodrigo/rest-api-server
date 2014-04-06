@@ -14,7 +14,7 @@
 
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-            <bean class="com.lenzi.server.HelloWorld"/>
+            <bean class="com.lenzi.server.webapp.HelloWorld"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <ref bean="jsonProvider"/>

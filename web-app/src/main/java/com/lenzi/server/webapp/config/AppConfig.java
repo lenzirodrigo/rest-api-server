@@ -1,4 +1,4 @@
-package com.lenzi.server.config;
+package com.lenzi.server.webapp.config;
 
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.codehaus.jackson.map.ObjectMapper;

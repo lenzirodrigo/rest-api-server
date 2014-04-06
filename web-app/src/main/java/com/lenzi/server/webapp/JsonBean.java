@@ -1,4 +1,4 @@
-package com.lenzi.server;
+package com.lenzi.server.webapp;
 
 
 public class JsonBean {

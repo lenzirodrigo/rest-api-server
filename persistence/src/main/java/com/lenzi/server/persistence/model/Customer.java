@@ -1,4 +1,4 @@
-package com.lenzi.server.model;
+package com.lenzi.server.persistence.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

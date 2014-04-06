@@ -1,4 +1,4 @@
-package com.lenzi.server.model;
+package com.lenzi.server.persistence.model;
 
 import javax.inject.Inject;
 
@@ -9,7 +9,7 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.lenzi.server.config.HibernateConfig;
+import com.lenzi.server.persistence.config.HibernateConfig;
 
 /**
  * @author rlenzi
