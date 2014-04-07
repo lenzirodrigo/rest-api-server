@@ -1,15 +1,17 @@
 package com.lenzi.server.persistence.model;
 
+import static org.junit.Assert.assertEquals;
+
 import javax.inject.Inject;
 
-import org.hibernate.Session;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.lenzi.server.persistence.config.HibernateConfig;
+import com.lenzi.server.persistence.dao.CustomerDao;
 
 /**
  * @author rlenzi
@@ -19,18 +21,19 @@ import com.lenzi.server.persistence.config.HibernateConfig;
 public class CustomerTest {
 
     @Inject
-    private HibernateTransactionManager transactionManager;
+    private CustomerDao customerDao;
 
-    @Test
+    @Before
     public void addCustomer() {
-        Session currentSession = transactionManager.getSessionFactory().openSession();
-
         Customer customer = new Customer();
         customer.setName("Rodrigo");
+        customerDao.addCustomer(customer);
+    }
 
-        currentSession.save(customer);
-        currentSession.flush();
-        currentSession.close();
+    @Test
+    public void getCustomer() {
+        Customer customer = customerDao.getCustomerBy(new Long("1"));
+        assertEquals("Rodrigo", customer.getName());
     }
 
 }

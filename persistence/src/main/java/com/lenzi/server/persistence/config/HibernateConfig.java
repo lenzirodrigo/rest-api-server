@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -20,6 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:persistence.properties")
+@ComponentScan("com.lenzi.server.persistence.dao")
 public class HibernateConfig {
 
     private static final String DATABASE_DRIVER = "db.driver";
@@ -59,7 +61,7 @@ public class HibernateConfig {
         return hibProperties;
     }
 
-    @Bean
+    @Bean(name =  "sessionFactory")
     public LocalSessionFactoryBean localSessionFactoryBean() {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource());

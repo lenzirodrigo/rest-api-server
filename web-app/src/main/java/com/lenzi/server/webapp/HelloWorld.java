@@ -8,10 +8,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import com.lenzi.server.persistence.daos.CustomerDao;
+import com.lenzi.server.persistence.dao.CustomerDao;
+import com.lenzi.server.persistence.model.Customer;
 
 @Path("/hello")
 public class HelloWorld {
+
     @Inject
     private CustomerDao customerDao;
 
@@ -31,5 +33,15 @@ public class HelloWorld {
         input.setVal2(input.getVal1());
         return Response.ok().entity(input).build();
     }
+
+    @GET
+    @Path("/customer/{id}")
+    @Produces("text/plain")
+    public String getCustomerName(@PathParam("id") Long id) {
+        Customer customer = customerDao.getCustomerBy(id);
+
+        return customer.getName();
+    }
+
 }
 
